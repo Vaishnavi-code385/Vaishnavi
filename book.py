@@ -23,18 +23,29 @@ class Book:
     
 class library:
  
-  def __init__(self):
+ def search_book(self, title):
+      found = False
+      for book in self.books:
+         if self.title in book["title"]:
+                print(f"Book found: {book['title']} by {book['author']}")
+                found = True
+                break
+         if not found:
+            print("Book not found.")
+ 
+def __init__(self):
         self.books = book_list
         self.librarians = []
 
-  def add_librarian(self, name):
+def add_librarian(self, name):
     self.librarians.append(name)
 
-  def add_book(self, title, author, book_id):
+def add_book(self, title, author, book_id):
     new_book = Book(title, author, book_id)
     self.books.append(new_book)
 
-library.add_book
+
+library. add_book
 [
  {"book1_name":"programmimg python","Author":"Mark Lutz","book_id":"1" },
  {"book2_name":" Introduction to Python Programming","Author":"Guido van Rossum","book_id":"2"},
@@ -57,7 +68,7 @@ def return_book(self,book_id):
 
 lib = library()
 search_book = input("Enter the book name:")
-lib.search_book(search_book)
+lib.search_book(search_book) 
 
 lib.borrow_book("2")
 lib.borrow_book("2")
